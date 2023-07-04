@@ -1,0 +1,73 @@
+@import "../../styles/constants.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $color-black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.organizer {
+  width: 100%;
+  max-width: 25rem;
+  min-width: 20rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  background-image: url("https://cdn.pixabay.com/photo/2016/07/23/13/18/pokemon-1536847_1280.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.text {
+  color: $color-white;
+  font-size: 1.4rem;
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.imagesContainer {
+  position: relative;
+  min-height: 18rem;
+  margin-top: 3rem;
+}
+
+.image {
+  position: absolute;
+}
+
+.image1 {
+  bottom: 0;
+  left: 0;
+}
+
+.image2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.image3 {
+  bottom: 0;
+  right: 0;
+}
+
+.startButton {
+  background-color: $color-quaternary;
+  color: $color-white;
+}
