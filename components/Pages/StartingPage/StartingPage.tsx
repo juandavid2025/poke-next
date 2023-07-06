@@ -1,8 +1,10 @@
 import Image from "next/image";
 
 import styles from "./StartingPage.module.scss";
+import { Button } from "@/components/UI2/button";
 
 function StartingPage() {
+  const handleStartButton = () => {};
   return (
     <div className={styles.container}>
       <div className={styles.organizer}>
@@ -41,7 +43,7 @@ function StartingPage() {
             className={`${styles.image} ${styles.image3}`}
           />
         </div>
-        {/* <Button text="Start" onClick={() => {}} /> */}
+        <Button onClick={handleStartButton}>Start</Button>
       </div>
     </div>
   );

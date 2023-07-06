@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image";
 import styles from "./BattlePage.module.scss";
 
@@ -12,11 +13,11 @@ const DUMMY_POKEMON_BATTLE = [
         attack: 100,
         defense: 100,
         specialDefense: 100,
-        speed: 100
+        speed: 100,
       },
       sprite:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-    }
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+    },
   },
   {
     pokemonFighter: {
@@ -28,15 +29,15 @@ const DUMMY_POKEMON_BATTLE = [
         attack: 100,
         defense: 100,
         specialDefense: 100,
-        speed: 100
+        speed: 100,
       },
       sprite:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
-    }
-  }
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+    },
+  },
 ];
 
-function BattlePage() {
+const BattlePage = () => {
   return (
     <div className={styles.battlePage}>
       <div className={styles.battleCard}>
@@ -91,6 +92,6 @@ function BattlePage() {
       </div>
     </div>
   );
-}
+};
 
 export default BattlePage;
