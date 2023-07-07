@@ -1,43 +1,14 @@
 import React from "react";
 import Image from "next/image";
+
+import { PokemonFighter } from "@/model/pokeFighter";
+
 import styles from "./BattlePage.module.scss";
 
-const DUMMY_POKEMON_BATTLE = [
-  {
-    pokemonFighter: {
-      id: "pokemon-1",
-      name: "pikachu",
-      types: ["electric"],
-      characteristics: {
-        hp: 100,
-        attack: 100,
-        defense: 100,
-        specialDefense: 100,
-        speed: 100,
-      },
-      sprite:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-    },
-  },
-  {
-    pokemonFighter: {
-      id: "pokemon-2",
-      name: "charizard",
-      types: ["fire", "flying"],
-      characteristics: {
-        hp: 100,
-        attack: 100,
-        defense: 100,
-        specialDefense: 100,
-        speed: 100,
-      },
-      sprite:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-    },
-  },
-];
-
-const BattlePage = () => {
+const BattlePage: React.FC<{
+  player1team: PokemonFighter[];
+  player2team: PokemonFighter[];
+}> = ({ player1team, player2team }) => {
   return (
     <div className={styles.battlePage}>
       <div className={styles.battleCard}>
@@ -45,14 +16,14 @@ const BattlePage = () => {
         <div className={styles.arena}>
           <Image
             alt="pikachu"
-            src={DUMMY_POKEMON_BATTLE[0].pokemonFighter.sprite}
+            src={player1team[0].sprites.front}
             width={200}
             height={200}
           />
           <p>v/s</p>
           <Image
             alt="charizard"
-            src={DUMMY_POKEMON_BATTLE[1].pokemonFighter.sprite}
+            src={player2team[1].sprites.front}
             width={200}
             height={200}
           />
