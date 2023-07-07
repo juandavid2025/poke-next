@@ -5,6 +5,7 @@ import { Button } from "@/components/UI2/button";
 
 function StartingPage() {
   const handleStartButton = () => {};
+
   return (
     <div className={styles.container}>
       <div className={styles.organizer}>
