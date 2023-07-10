@@ -1,0 +1,16 @@
+.teamDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.fainted {
+  filter: grayscale(100%);
+}
+
+@media (max-width: 34.5em) {
+  .image {
+    width: 20px;
+    height: 20px;
+  }
+}
