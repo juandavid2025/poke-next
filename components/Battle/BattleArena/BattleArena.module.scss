@@ -1,0 +1,30 @@
+@import "../../../styles/constants.scss";
+
+.arena {
+  margin-top: 1rem;
+  display: flex;
+
+  align-items: center;
+}
+
+.vs {
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: $color-black-tint;
+  color: gray;
+  border-radius: 10px;
+}
+
+.playerNameIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (max-width: 34.5em) {
+  .image {
+    width: 140px;
+    height: 140px;
+  }
+}
