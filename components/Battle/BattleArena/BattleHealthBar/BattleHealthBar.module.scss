@@ -1,0 +1,12 @@
+.progress {
+  max-width: 9rem;
+  height: 2rem;
+
+  animation: progress 1s linear forwards;
+}
+
+@media (max-width: 21.5em) {
+  .progress {
+    max-width: 7rem;
+  }
+}
