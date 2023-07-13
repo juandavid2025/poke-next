@@ -1,0 +1,22 @@
+@import "../../../styles/constants.scss";
+
+.movesContainer {
+  margin-top: 3rem;
+  width: 100%;
+
+  border: 1px solid $color-white;
+  padding: 0.4rem 0.6rem;
+}
+
+.movesOverlay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 0.5rem;
+}
+
+@media (max-width: 20.1em) {
+  .movesOverlay {
+    grid-template-columns: 1fr;
+  }
+}

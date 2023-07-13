@@ -1,9 +1,9 @@
 import React from "react";
 
 import { PokemonTeamDisplayStatus } from "@/model/pokeTeamDisplayStatus";
+import TeamDisplayStatus from "./TeamDisplayStatus/TeamDisplayStatus";
 
 import styles from "./BattleTeamDisplay.module.scss";
-import TeamDisplayStatus from "./TeamDisplayStatus/TeamDisplayStatus";
 
 const BattleTeamDisplay: React.FC<{
   pokemonTeamsStatus: {

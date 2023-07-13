@@ -7,6 +7,13 @@
   align-items: center;
 }
 
+.arenaOverlay {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
 .vs {
   font-size: 1.5rem;
   padding: 0.4rem 0.8rem;
@@ -19,12 +26,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 @media (max-width: 34.5em) {
+  .vs {
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+  }
+
   .image {
     width: 140px;
     height: 140px;
+  }
+}
+
+@media (max-width: 21.5em) {
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .vs {
+    font-size: 0.8rem;
+    padding: 0.1rem 0.2rem;
   }
 }

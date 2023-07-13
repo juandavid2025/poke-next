@@ -6,6 +6,7 @@ import { PokemonTeamDisplayStatus } from "@/model/pokeTeamDisplayStatus";
 
 import BattleTeamDisplay from "@/components/Battle/BattleTeamDisplay/BattleTeamDisplay";
 import BattleArena from "@/components/Battle/BattleArena/BattleArena";
+import BattleMovesDisplay from "@/components/Battle/BattleMovesDisplay/BattleMovesDisplay";
 
 import styles from "./BattlePage.module.scss";
 
@@ -14,7 +15,7 @@ const BattlePage: React.FC<{
   player2team: PokemonFighter[];
 }> = ({ player1team, player2team }) => {
   const [player1CurrPokemon, setPlayer1CurrPokemon] = useState(0); //change 0 for random or user selected later
-  const [player2CurrPokemon, setPlayer2CurrPokemon] = useState(0); //change 0 for random or user selected later
+  const [player2CurrPokemon, setPlayer2CurrPokemon] = useState(2); //change 0 for random or user selected later
 
   const [teamDisplayStatus, setTeamDisplayStatus] = useState<{
     teamDisplay1: PokemonTeamDisplayStatus[];
@@ -33,22 +34,15 @@ const BattlePage: React.FC<{
           pokemon1={player1team[player1CurrPokemon]}
           pokemon2={player2team[player2CurrPokemon]}
         />
-        <div className={styles.attacksContainer}>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <BattleMovesDisplay
+          pokemonMoves={player1team[player1CurrPokemon].moves}
+        />
       </div>
     </div>
   );
 };
 
 export default BattlePage;
-
-function randomNumber(min: number, max: number) {
-  return Math.round(Math.random() * (max - min) + min);
-}
 
 function getTeamDisplayStatus(
   playerTeamFighters: PokemonFighter[],
