@@ -3,9 +3,13 @@ import Image from "next/image";
 import styles from "./StartingPage.module.scss";
 import { Button } from "@/components/UI2/button";
 
-function StartingPage() {
-  const handleStartButton = () => {};
+import { useRouter } from "next/router";
 
+function StartingPage() {
+  const router = useRouter();
+  const handleStartButton = () => {
+    router.push("/next-steps");
+  };
   return (
     <div className={styles.container}>
       <div className={styles.organizer}>

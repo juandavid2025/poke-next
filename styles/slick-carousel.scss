@@ -1,0 +1,78 @@
+@import '~slick-carousel/slick/slick.scss';
+@import '~slick-carousel/slick/slick-theme.scss';
+
+.pokemon-carousel {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slick-slide {
+  text-align: center;
+}
+
+.pokemon-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  img {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 5px;
+  }
+
+  button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:before {
+      content: '';
+    }
+
+    &.slick-active {
+      background-color: #007bff;
+    }
+  }
+}
