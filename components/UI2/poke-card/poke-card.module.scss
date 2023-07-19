@@ -1,0 +1,37 @@
+@import "../../../styles/constants.scss";
+
+.pokemon_card {
+  width: 250px;
+  padding: 20px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center;
+
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+  }
+
+  img {
+    width: 150px;
+    margin: 10px auto;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+  }
+}
+
+.slick-track {
+  display: flex;
+  justify-content: center;
+}
